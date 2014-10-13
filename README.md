@@ -7,9 +7,8 @@ Install
 -------
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Install [Vagrant](http://vagrantup.com/), either [by package](http://downloads.vagrantup.com/) or `gem install vagrant`
-3. (Optional) Edit `Vagrantfile` shared folders if you are using `salt/pillar` or `salt/formulas`
-4. Write some states!
-5. `vagrant up`
+3. Write some states!
+4. `vagrant up`
 
 Development
 -----------
