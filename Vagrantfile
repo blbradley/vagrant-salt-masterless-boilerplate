@@ -26,16 +26,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
 
-  # Share salt roots to the guest VM.
-  config.vm.synced_folder "salt/roots", "/srv/salt"
+  # Share salt states to the guest VM.
+  config.vm.synced_folder "states", "/srv"
 
-  # Share salt pillars and formulas to the guest VM.
-  # config.vm.synced_folder "salt/pillar", "/srv/pillar"
-  # config.vm.synced_folder "salt/formulas", "/srv/formulas"
-  
   # Provision with salt.
   config.vm.provision :salt do |salt|
-    salt.minion_config = "salt/minion"
+    salt.minion_config = "config/minion"
     salt.run_highstate = true
     #salt.verbose = true
     #salt.log_level = "info"
